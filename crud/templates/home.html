@@ -20,14 +20,14 @@
 			{%for estudiante in estudiantes%}
 			<tr class="tr__Tabla">
 				<td class="td__Tabla">{{estudiante.nombre}}</td>
-				<td class="td__Tabla">{{estudiante.domilicio}}</td>
+				<td class="td__Tabla">{{estudiante.domicilio}}</td>
 				<td class="td__Tabla">{{estudiante.edad}}</td>
 				<td class="td__Tabla">{{estudiante.correo}}</td>
 				<td class="td__Tabla">{{estudiante.carrera}}</td>
 				<td class="td__Tabla">{{estudiante.turno}}</td>
 				<td class="td__Tabla">
 					<li class="li__Tabla"><a href="{% url 'estudiante_editar' estudiante.id %}" class="a__Tabla a__Editar btn btn-primary">Editar</a></li>
-<!-- 					<li class="li__Tabla"><a href="{% url 'estudiante_eliminar' estudiante.id %}" class="a__Tabla a__Eliminar">Eliminar</a></li> -->
+					<li class="li__Tabla"><a href="{% url 'estudiante_eliminar' estudiante.id %}" class="a__Tabla a__Eliminar btn btn-danger">Eliminar</a></li>
 				</td>
 			</tr>
 			{%endfor%}
