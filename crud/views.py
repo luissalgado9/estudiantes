@@ -12,7 +12,7 @@ from django.http import HttpResponse
 def home(request):
 	alumnos = Estudiantes.objects.all()
 	contexto = {'estudiantes':alumnos}
-	return render(request,'home.html', {'estudiantes':alumnos,'title':'Lista de estudiante bueno'})
+	return render(request,'home.html', {'estudiantes':alumnos,'title':'Lista de estudiante'})
 
 def estudiante_view(request):
 	if request.method == 'POST':

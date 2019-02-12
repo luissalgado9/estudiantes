@@ -26,8 +26,8 @@
 				<td class="td__Tabla">{{estudiante.carrera}}</td>
 				<td class="td__Tabla">{{estudiante.turno}}</td>
 				<td class="td__Tabla">
-					<li class="li__Tabla"><a href="{% url 'estudiante_editar' estudiante.id %}" class="a__Tabla a__Editar">Editar</a></li>
-					<li class="li__Tabla"><a href="{% url 'estudiante_eliminar' estudiante.id %}" class="a__Tabla a__Eliminar">Eliminar</a></li>
+					<li class="li__Tabla"><a href="{% url 'estudiante_editar' estudiante.id %}" class="a__Tabla a__Editar btn-danger">Editar</a></li>
+<!-- 					<li class="li__Tabla"><a href="{% url 'estudiante_eliminar' estudiante.id %}" class="a__Tabla a__Eliminar">Eliminar</a></li> -->
 				</td>
 			</tr>
 			{%endfor%}
