@@ -1,12 +1,12 @@
 {%extends "base.html" %}
 {%block title%}Lista estudiantes{%endblock%}
 {%block content%}
-<div class="contenedor">
-	<li class="li__Agregar"><a href="/nuevo" class="a__Agregar">Agregar nuevo</a></li>
+<div class="contenedor container">
+	<li class="li__Agregar text-center"><a href="/nuevo" class="a__Agregar btn btn-primary text-center">Agregar nuevo</a></li>
 </div>
-<div class="contenedor">
+<div class="contenedor container">
 	<div class="contenedor__Tabla">
-		<table class="tabla">
+		<table class="tabla table table-bordered">
 			<tr class="tr__Tabla">
 				<td class="td__Tabla">Nombre</td>
 				<td class="td__Tabla">Domicilio</td>
@@ -20,14 +20,14 @@
 			{%for estudiante in estudiantes%}
 			<tr class="tr__Tabla">
 				<td class="td__Tabla">{{estudiante.nombre}}</td>
-				<td class="td__Tabla">{{estudiante.domilicio}}</td>
+				<td class="td__Tabla">{{estudiante.domicilio}}</td>
 				<td class="td__Tabla">{{estudiante.edad}}</td>
 				<td class="td__Tabla">{{estudiante.correo}}</td>
 				<td class="td__Tabla">{{estudiante.carrera}}</td>
 				<td class="td__Tabla">{{estudiante.turno}}</td>
 				<td class="td__Tabla">
-					<li class="li__Tabla"><a href="{% url 'estudiante_editar' estudiante.id %}" class="a__Tabla a__Editar">Editar</a></li>
-					<li class="li__Tabla"><a href="{% url 'estudiante_eliminar' estudiante.id %}" class="a__Tabla a__Eliminar">Eliminar</a></li>
+					<li class="li__Tabla"><a href="{% url 'estudiante_editar' estudiante.id %}" class="a__Tabla a__Editar btn btn-primary">Editar</a></li>
+					<li class="li__Tabla"><a href="{% url 'estudiante_eliminar' estudiante.id %}" class="a__Tabla a__Eliminar btn btn-danger">Eliminar</a></li>
 				</td>
 			</tr>
 			{%endfor%}

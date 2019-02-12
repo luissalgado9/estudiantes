@@ -1,8 +1,11 @@
 {%extends "base.html"%}
+{%block title%}Agregar{%endblock%}
 {%block content%}
-<form method="post">
-	{% csrf_token%}
-	{{form.as_p}}
-	<button type="submit">Guardar</button>
-</form>
+<div class="container">
+	<form method="post">
+		{% csrf_token%}
+		{{form.as_p}}
+		<button type="submit">Guardar</button>
+	</form>
+</div>
 {%endblock%}

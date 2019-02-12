@@ -4,16 +4,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>{%block title%}{%endblock%}</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'assets/estilos.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/estilos.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
 </head>
 <body>
-	<div class="contenedor">
+	<div class="contenedor container">
 		<div class="contenedor__Titulo">
-			<h1 class="titulo"></h1>
+			<h1 class="titulo">{{title}}</h1>
 		</div>
 	</div>
 	{%block content%}
 
 	{%endblock%}
+
+<script src="{% static 'assets/js/bootstrap.min.js'%}"></script>
 </body>
+
 </html>
