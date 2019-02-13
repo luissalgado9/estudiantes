@@ -14,6 +14,7 @@ class EstudianteForm(forms.ModelForm):
 			'correo',
 			'carrera',
 			'turno',
+			'foto',
 		]
 		labels = {
 			'nombre':'Nombre',
@@ -22,6 +23,7 @@ class EstudianteForm(forms.ModelForm):
 			'correo': 'Correo',
 			'carrera':'Carrera',
 			'turno': 'Turno',
+			'foto':'Foto',
 		}
 		widgets = {
 			'nombre': forms.TextInput(attrs={'class':'form-control'}),
@@ -30,4 +32,5 @@ class EstudianteForm(forms.ModelForm):
 			'correo': forms.TextInput(attrs={'class':'form-control'}),
 			'carrera': forms.TextInput(attrs={'class':'form-control'}),
 			'turno': forms.TextInput(attrs={'class':'form-control'}),
+			'foto' : forms.FileInput(attrs={'class':'form-control'}),
 		}

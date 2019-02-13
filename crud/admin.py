@@ -7,7 +7,7 @@ from crud.models import Estudiantes
 # Register your models here.
 
 class TablaEstudiante(admin.ModelAdmin):
-	list_display = ('nombre', 'domicilio', 'edad', 'correo', 'carrera','turno')
+	list_display = ('nombre', 'domicilio', 'edad', 'correo', 'carrera','turno','foto')
 
 admin.site.register(Estudiantes, TablaEstudiante)
 

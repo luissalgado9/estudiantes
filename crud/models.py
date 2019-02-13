@@ -13,3 +13,4 @@ class Estudiantes(models.Model):
 	correo = models.EmailField(max_length=30)
 	carrera = models.CharField(max_length=30)
 	turno = models.CharField(max_length=20)
+	foto = models.FileField(upload_to='fotos',null=True)

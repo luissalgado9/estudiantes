@@ -14,6 +14,7 @@
 				<td class="td__Tabla">Correo</td>
 				<td class="td__Tabla">Carrera</td>
 				<td class="td__Tabla">Turno</td>
+				<td class="td__Tabla">Foto</td>
 				<td class="td__Tabla">Opciones</td>
 			</tr>
 			{%if estudiantes%}
@@ -25,6 +26,7 @@
 				<td class="td__Tabla">{{estudiante.correo}}</td>
 				<td class="td__Tabla">{{estudiante.carrera}}</td>
 				<td class="td__Tabla">{{estudiante.turno}}</td>
+				<td class="td__Tabla"><img src="media/{{estudiante.foto}}" alt="" class="foto"></td>
 				<td class="td__Tabla">
 					<li class="li__Tabla"><a href="{% url 'estudiante_editar' estudiante.id %}" class="a__Tabla a__Editar btn btn-primary">Editar</a></li>
 					<li class="li__Tabla"><a href="{% url 'estudiante_eliminar' estudiante.id %}" class="a__Tabla a__Eliminar btn btn-danger">Eliminar</a></li>

@@ -16,7 +16,7 @@ def home(request):
 
 def estudiante_view(request):
 	if request.method == 'POST':
-		form = EstudianteForm(request.POST)
+		form = EstudianteForm(request.POST, request.FILES)
 		if form.is_valid():
 			form.save()
 		return redirect('index')
