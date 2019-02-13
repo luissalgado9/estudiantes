@@ -1,2 +1,13 @@
 body{
+	background-color: aliceblue;
+}
+.titulo{
+	padding: 2vw 0;
+}
+a,li{
+	list-style: none;
+	text-decoration: none;
+}
+.a__Agregar{
+	margin: 2vw 0;
 }
